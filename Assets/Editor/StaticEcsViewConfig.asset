@@ -20,9 +20,11 @@ MonoBehaviour:
       drawFrames: 2
     entities:
       componentColumns:
+      - _Game/Scripts/World/Components/HealthComponent
       - _Game/Scripts/World/Components/NameComponent
       tagColumns: []
       showTableDataTypes:
+      - _Game/Scripts/World/Components/HealthComponent
       - _Game/Scripts/World/Components/NameComponent
       sortByType: 
       maxEntityResult: 100
