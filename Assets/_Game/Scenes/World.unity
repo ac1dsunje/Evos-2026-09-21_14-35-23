@@ -388,6 +388,7 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
+  _creatureViewPrefab: {fileID: 2476725212700986271, guid: eef47a3ce5502964dbf6e93cb29281d1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

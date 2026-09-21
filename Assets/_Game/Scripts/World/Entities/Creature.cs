@@ -1,4 +1,5 @@
 ﻿using _Game.Scripts.World.Components;
+using _Game.Scripts.World.Tags;
 using FFS.Libraries.StaticEcs;
 using UnityEngine;
 
@@ -12,7 +13,9 @@ public struct Creature : IEntityType
     {
         entity.Set(
             new NameComponent {Name = "Creature"},
-            new HealthComponent {Value = Random.Range(1, 100)});
+            new HealthComponent {Value = Random.Range(1, 100)},
+            new InputComponent {Direction = Vector2.right})
+            .Set<AddViewTag>();
     }
 }
 }

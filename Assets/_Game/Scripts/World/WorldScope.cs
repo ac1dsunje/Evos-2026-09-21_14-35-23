@@ -1,5 +1,8 @@
 using _Game.Scripts.World.Systems;
+using _Game.Scripts.World.View;
+using _Game.Scripts.World.WorldResources;
 using FFS.Libraries.StaticEcs.Unity;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -7,6 +10,8 @@ namespace _Game.Scripts.World
 {
 public class WorldScope : LifetimeScope
 {
+    [SerializeField] private CreatureView _creatureViewPrefab;
+    
     protected override void Configure(IContainerBuilder builder)
     {
         W.Create();
@@ -18,9 +23,15 @@ public class WorldScope : LifetimeScope
 
         W.Types().RegisterAll();
         W.Initialize();
+        
+        W.SetResource(new CreatureViewPrefabResource { Prefab = _creatureViewPrefab });
 
-        GameSys.Add(new RegenerationSystem());
         GameSys.Add(new SpawnerSystem());
+        GameSys.Add(new RandomInputSystem());
+        GameSys.Add(new ViewCreatingSystem());
+        GameSys.Add(new RegenerationSystem());
+
+        FixedSys.Add(new RigidBodyMoverSystem());
         
         GameSys.Initialize();
         FixedSys.Initialize();
