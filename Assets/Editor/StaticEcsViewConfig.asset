@@ -15,22 +15,24 @@ MonoBehaviour:
   worlds:
   - worldTypeFullName: _Game.Scripts.World.GameWorld
     main:
-      selectedTabName: 
+      selectedTabName: Entities
       drawRate: 0.5
       drawFrames: 2
     entities:
       componentColumns:
       - _Game/Scripts/World/Components/HealthComponent
+      - _Game/Scripts/World/Components/InputComponent
       - _Game/Scripts/World/Components/NameComponent
       - _Game/Scripts/World/Components/RigidBodyComponent
       tagColumns:
       - _Game/Scripts/World/Tags/AddViewTag
       showTableDataTypes:
       - _Game/Scripts/World/Components/HealthComponent
+      - _Game/Scripts/World/Components/InputComponent
       - _Game/Scripts/World/Components/NameComponent
       - _Game/Scripts/World/Components/RigidBodyComponent
       sortByType: 
-      maxEntityResult: 1000
+      maxEntityResult: 101
       pinnedEntities: 
       filterActive: 0
       gidFilterActive: 0
