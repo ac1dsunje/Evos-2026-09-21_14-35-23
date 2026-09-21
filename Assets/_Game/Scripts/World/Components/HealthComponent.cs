@@ -1,8 +1,10 @@
-﻿using FFS.Libraries.StaticEcs;
+﻿using System;
+using FFS.Libraries.StaticEcs;
 using FFS.Libraries.StaticEcs.Unity;
 
 namespace _Game.Scripts.World.Components
 {
+[Serializable]
 public struct HealthComponent : IComponent
 {
     [StaticEcsEditorTableValue] public float Value;
