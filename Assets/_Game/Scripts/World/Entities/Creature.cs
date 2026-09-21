@@ -1,5 +1,6 @@
 ﻿using _Game.Scripts.World.Components;
 using FFS.Libraries.StaticEcs;
+using UnityEngine;
 
 namespace _Game.Scripts.World.Entities
 {
@@ -11,7 +12,7 @@ public struct Creature : IEntityType
     {
         entity.Set(
             new NameComponent {Name = "Creature"},
-            new HealthComponent {Value = 5});
+            new HealthComponent {Value = Random.Range(1, 100)});
     }
 }
 }
